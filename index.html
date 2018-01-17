@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Tic-Tac-Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://webtechnelson.com/images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+  <!-- External Google Font CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">
+
+ </head>
+
+  <!-- BODY-->
+<body>
+    <div id="navBg" class="navbar-dark">
+        <nav class="container navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img src="https://webtechnelson.com/images/logo.png" width="30px" height="30px" alt="logo"> Webtechnelson</a>
+            <button class="navbar-toggler pointer" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"></li>
+                        <a class="nav-link homelink" href="#"><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-building fa-lg" aria-hidden="true"></i> Helpful Link for this Pen</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="https://medium.freecodecamp.org/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i> Minimax Algorithm Written by ahmad abdolsaheb</a>
+                            </div>
+                        </li>
+                    <li class="nav-item"><a class="nav-link homeLink" href="https://codepen.io/techednelson/collections/popular/" target="_blank"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i> My Other Projects</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-commenting fa-lg" aria-hidden="true"></i> Contact & Feedback</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://twitter.com/webtechnelson" target="_blank"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i> Twitter</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> info@webtechnelson.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+        <!--Tic-Tac-Toe-->
+    <h1 id="title">Tic Tac Toe <span>Game</span></h1>
+    
+        <div id="playerTurn"><h4></h4></div>
+        <div id="boardExt">
+            <div id="boardInt">
+                <table>
+                    <tr>
+                        <th class ='cell'id="0"></th>
+                        <th class ='cell' id="1"></th>
+                        <th class ='cell' id="2"></th>
+                    </tr>
+                    <tr>
+                        <th class ='cell' id="3"></th>
+                        <th class ='cell' id="4"></th>
+                        <th class ='cell' id="5"></th>
+                    </tr>
+                    <tr>
+                        <th class ='cell' id="6"></th>
+                        <th class ='cell' id="7"></th>
+                        <th class ='cell' id="8"></th>
+                    </tr>
+                </table>
+                <div id="firstWindow">
+                    <h4>Number</h4>
+                    <h4>Of Players?</h4>
+                    <div>
+                        <button id="onePlayer" class="players"> 1 Player</button>
+                        <button id="twoPlayers" class="players"> 2 Players </button>
+                    </div>
+    
+                </div>
+                <div id="secondWindow">
+                    <h4>Please, Pick</h4>
+                    <h4>X or O ?</h4>
+                    <div>
+                        <button id="x" class="players"> X </button>
+                        <button id="o" class="players"> O </button>
+                    </div>
+                    <button id="back" class="players"><i class="fa fa-arrow-left fa-gl" aria-hidden="true"></i> Back </button>
+                </div>
+                <div id="thirdWindow">
+                    <h4>Please, Pick</h4>
+                    <h4>a level ?</h4>
+                    <div>
+                        <button id="easy" class="players"> Piece of cake </button>
+                        <button id="hard" class="players"> Impossible </button>
+                    </div>
+                    <button id="back2" class="players"><i class="fa fa-arrow-left fa-gl" aria-hidden="true"></i> Back </button>
+                </div>
+                <div id='winWindow'>Game Over is a Draw!</div>
+            </div>
+        </div>
+        <button id="resetAll" class="players">Reset All</button>
+          <!--/Tic-Tac-Toe-->
+
+    <script src="js/app.js"></script>
+    <script src="https://use.fontawesome.com/dfb01e1534.js"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
